@@ -1,6 +1,6 @@
 |updatedisclaimer|
 
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not up-to-date with release
 
 .. _general_tools:
 
@@ -322,8 +322,9 @@ features` or press :kbd:`Ctrl + Shift + I`, or click on the |mActionIdentify|
 
 If you click on several features, the :guilabel:`Identify results` dialog will
 list information about all the selected features. The first item is the number of the
-feature in the list of results, followed by the layer name. Then, its first child will
-be the name of a field with its value. Finally, all information about the feature
+layer in the list of results, followed by the layer name. Then, its first child will
+be the name of a field with its value. The first field is the one selected in 
+:menuselection:`Properties --> Display`. Finally, all information about the feature
 is displayed.
 
 This window can be customized to display custom fields, but by default it will
@@ -347,15 +348,25 @@ display three kinds of information:
 .. figure:: /static/user_manual/introduction/identify_features.png
    :align: center
 
-   Identify feaures dialog |nix| (Gnome)
+   Identify features dialog |nix| (Gnome)
 
-At the bottom of the window, you have five icons:
+At the top of the window, you have five icons:
 
 * |mActionIdentifyExpand| :sup:`Expand tree`
 * |mActionIdentifyCollapse| :sup:`Collapse tree`
 * |mActionIdentifyDefaultExpand| :sup:`Default behaviour`
 * |mActionIdentifyCopyAttributes| :sup:`Copy attributes`
 * |mActionIdentifyPrint| :sup:`Print selected HTML response`
+
+At the bottom of the window, you have the :guilabel:`Mode` and :guilabel:`View`
+comboboxes.
+With the :guilabel:`Mode` combobox you can define the identify mode: 'Current layer',
+'Top down, stop at first', 'Top down' and 'Layer selection'.
+The :guilabel:`View` can be set as 'Tree', 'Table' and 'Graph'.
+
+The identify tool allows you to auto open a form. In this mode you can change the
+features attributes.
+
 
 Other functions can be found in the context menu of the identified item. For
 example, from the context menu you can:
@@ -467,7 +478,7 @@ Scale Bar
 ---------
 
 |scale_bar| :sup:`Scale Bar` adds a simple scale bar to the map canvas. You
-can control the style and placement, as well as the labeling of the bar.
+can control the style and placement, as well as the labelling of the bar.
 
 .. _figure_decorations_4:
 

@@ -61,7 +61,7 @@ guidelines are as follows:
   at office@linfiniti.com and we will advise you if what you intend doing is
   acceptable.
 * If you publish this work under a self publishing site such as
-  http:://lulu.com we request that you donate the profits to the QGIS project.
+  http://lulu.com we request that you donate the profits to the QGIS project.
 * You may not commercialise this work, except with the expressed permission of
   the authors. To be clear, by commercialisation we mean that you may not sell
   for profit, create commercial derivative works (e.g. selling content for use
@@ -123,12 +123,10 @@ from the following sources:
 Latest Version
 --------------
 
-You can always obtain the latest version of this document by visiting our `home
-page <http://readthedocs.org/builds/the-free-qgis-training-manual/>`_ which is
-kindly hosted by http://readthedocs.org.
+You can always obtain the latest version of this document by visiting the online
+version which is part of the QGIS documentation website (http://docs.qgis.org).
 
-.. note:: There are links to PDF and epub versions of the documentation in the
-   lower right hand corner of the above mentioned home page.
+.. note:: There are links to online and PDF versions of the Documentation and Training manuals.
 
 
 

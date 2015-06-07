@@ -54,8 +54,8 @@ figure_attributes_3_). For example, if you choose a field width of 10 and a fiel
 precision of 3, it means you have 6 digits before the dot, then the dot and another
 3 digits for the precision.
 
-A short example illustrates how the field calculator works. We want to
-calculate the length in km of the ``railroads`` layer from the |qg| sample dataset:
+A short example illustrates how field calculator works when using the :guilabel:`Expression` tab.
+We want to calculate the length in km of the ``railroads`` layer from the |qg| sample dataset:
 
 #. Load the shapefile :file:`railroads.shp` in |qg| and press |mActionOpenTable|
    :sup:`Open Attribute Table`.
@@ -83,10 +83,12 @@ If you have a project that uses one of your custom functions you will need to al
 the .py file in the expressions folder. 
 
 Here's a short example on how to create your own functions:
-::
- @qgsfunction(args="auto", group='Custom')
- def myfunc(value1, value2 feature, parent):
-    pass
+
+.. code-block:: python
+
+   @qgsfunction(args="auto", group='Custom')
+   def myfunc(value1, value2 feature, parent):
+       pass
 
 The short example creates a function 'myfunc' that will give you a function with two
 values.
@@ -95,8 +97,10 @@ arguments required will be calculated by the number of arguments the
 function has been defined with in Python (minus 2 - feature, and parent).
 
 This function then can be used with the following expression:
-::
-  myfunc('test1', 'test2')
+
+.. code-block:: python
+
+   myfunc('test1', 'test2')
 
 Your function will be implemented in the 'Custom' :guilabel:`Functions` of the :guilabel:`Expression` tab
 after using the :guilabel:`Run Script` button.

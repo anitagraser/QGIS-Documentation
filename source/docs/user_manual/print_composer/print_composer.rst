@@ -7,7 +7,7 @@ Print Composer
 **************
 .. index:: Create_Maps, Layout_Maps, Compose_Maps
 
-With the Print Composer you can create nice maps and atlasses that can be printed or saved as PDF-file, an image or an SVG-file. This is a powerfull way to share geographical information produced with |qg| that can be included in reports or published.
+With the Print Composer you can create nice maps and atlasses that can be printed or saved as PDF-file, an image or an SVG-file. This is a powerful way to share geographical information produced with |qg| that can be included in reports or published.
 
 The Print Composer provides growing layout and printing capabilities. It allows
 you to add elements such as the |qg| map canvas, text labels, images, legends, scale bars, basic
@@ -249,7 +249,7 @@ Background, Item ID and Rendering (See figure_composer_common_1_).
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the label.
   Use the :guilabel:`Frame color` and :guilabel:`Thickness` menus to adjust those properties.
 * Use the :guilabel:`Background color` menu for setting a background color.
-  With the dialog you can pick a color (see color_picker_ ).
+  With the dialog you can pick a color (see :ref:`color_picker`).
 * Use the :guilabel:`Item ID` to create a relationship to other Print Composer items. This is used with |qg| server and any potential web 
   client. You can set an ID on an item (e.g., a map and a label), and then the web client can send data to set a property 
   (e.g., label text) for that specific item. The GetProjectSettings command will list what items and which IDs are available in a layout.
@@ -478,7 +478,7 @@ map element. Expand this option to provide a lot of configuration options, see F
 
 As grid type, you can specify to use a 'Solid', 'Cross', 'Markers' or 'Frame and annotations only'.
 'Frame and annotations only' is especially useful when working with rotated maps or reprojected
-grids. In the devisions section of the Grid Frame Dialog mentioned below you then have a corresponding setting.
+grids. In the divisions section of the Grid Frame Dialog mentioned below you then have a corresponding setting.
 Symbology of the grid can be chosen. See section Rendering_Mode_.
 Furthermore, you can define an interval in the X and Y directions, an X and Y offset,
 and the width used for the cross or line grid type.
@@ -497,7 +497,7 @@ and the width used for the cross or line grid type.
 * There are different options to style the frame that holds the map. Following options are 
   available: No Frame, Zebra, Interior ticks, Exterior ticks, Interior and Exterior ticks and Lineborder.
 
-* With 'LatitudeY/ only' and 'Longitude/X only' setting in the devisions section you have the possibility
+* With 'LatitudeY/ only' and 'Longitude/X only' setting in the divisions section you have the possibility
   to prevent a mix of latitude/y and longitude/x coordinates showing on a side when working with
   rotated maps or reprojected grids. 
 
@@ -816,7 +816,7 @@ The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` dialogs of the
 * You can change the font of the legend title, group, subgroup and item (layer) in the legend item. 
   Click on a category button to open a **Select font** dialog.
 * You provide the labels with a **Color** using the advanced color picker, however the selected 
-  color will be given to all font items in the legend..
+  color will be given to all font items in the legend.
 * Legend items can be arranged over several columns. Set the number of columns in 
   the :guilabel:`Count` |selectnumber| field.
 
@@ -951,7 +951,7 @@ You can define how the scale bar will be displayed in its frame.
 
 * :guilabel:`Box margin` : space between text and frame borders
 * :guilabel:`Labels margin` :  space between text and scale bar drawing
-* :guilabel:`Line width` : line widht of the scale bar drawing
+* :guilabel:`Line width` : line width of the scale bar drawing
 * :guilabel:`Join style` : Corners at the end of scalebar in style Bevel, Rounded or Square 
   (only available for Scale bar style Single Box & Double Box)  
 * :guilabel:`Cap style` : End of all lines in style Square, Round or Flat
@@ -1126,15 +1126,18 @@ tab provide the following functionalities (see figure_composer_table_2_):
 * The button **[Refresh table data]** can be used to refresh the table when the actual 
   contents of the table has changed.
 * In case you activated the |checkbox|:guilabel:`Generate an atlas` option in the 
-  :guilabel:`Atlas generation` tab there are two additional :guilabel:`Source` possible:
+  :guilabel:`Atlas generation` tab, there are two additional :guilabel:`Source` possible:
   'Current atlas feature' (see figure_composer_table_2b_) and 'Relation children'
   (see figure_composer_table_2c_). Choosing the 'Current atlas feature'
-  you won't see any option to choose the layer and choosing 'Relation children' an option with
-  the relation name will show up. The 'Relation children' option is used if you have defined 
-  a relation with your atlas feature as parent (for further information about the atlas generation
+  you won't see any option to choose the layer, and the table item will only 
+  show a row with the attributes from the current feature of the atlas coverage layer. 
+  Choosing 'Relation children', an option with the relation name will show up.
+  The 'Relation children' option can only be used if you have defined a relation using 
+  your atlas coverage layer as parent, and it will show the children rows of 
+  the atlas coverage layer's current feature (for further information about the atlas generation
   see atlasgeneration_).
 
-.. Figure_composer_table_2b:
+.. _Figure_composer_table_2b:
 
 .. only:: html
 
@@ -1146,7 +1149,7 @@ tab provide the following functionalities (see figure_composer_table_2_):
    Attribute table Main properties for 'Current atlas feature' |nix|
 
 
-.. Figure_composer_table_2c:
+.. _Figure_composer_table_2c:
 
 .. only:: html
 
@@ -1234,7 +1237,7 @@ You can:
   * ``NAME NOT LIKE 'AN%`` 
   * ``regexp_match( attribute( $currentfeature, 'USE' )  , '[i]')``
 
-  The last regular expression will include only the arpoirts that have a letter 'i' 
+  The last regular expression will include only the airports that have a letter 'i' 
   in the attribute field 'USE'. 
 
 Appearance
@@ -1262,7 +1265,7 @@ tab provide the following functionalities  (see figure_composer_table_5_):
 * The option :guilabel:`Empty table` controls what will be displayed when the result
   selection is empty.
 
-  * **Draw headers only**, will only draw the header except if you have choosen 'No header' 
+  * **Draw headers only**, will only draw the header except if you have chosen 'No header' 
     for :guilabel:`Display header`.
   * **Hide entire table**, will only draw the background of the table. You can activate 
     |checkbox| :guilabel:`Don't draw background if frame is empty` in :guilabel:`Frames` 
@@ -1747,7 +1750,7 @@ You can provide following expression for field :guilabel:`X` :
 For all other composer items you can set the position in a similar way so they are correctly positioned 
 when page is automatically rotated in portrait or landscape.
 
-Information provided is derived from the excellent blog (in english and portugese) 
+Information provided is derived from the excellent blog (in English and Portuguese) 
 on the Data Defined Override options Multiple_format_map_series_using_QGIS_2.6_ .
 
 This is just one example of how you can use Data Defined Overrides.
@@ -1774,7 +1777,7 @@ Hide and show panels
 To maximise the space available to interact with a composition you can use :guilabel:`View -->`
 |checkbox| :guilabel:`Hide panels` or press :kbd:`F10`.
 
-:: note::
+.. note::
 
    It's also possible to switch to a full screen mode to have more space to interact by pressing
    :kbd:`F11` or using :guilabel:`View --> |checkbox| :guilabel:`Toggle full screen`.

@@ -55,6 +55,33 @@ and do the rendering
   # save image
   img.save("render.png","png")
 
+
+
+Rendering layers with different CRS
+====================================
+
+If you have more than one layer and they have a different CRS, the simple
+example above will probably not work: to get the right values from the
+extent calculations you have to explicitly set the destination CRS and enable
+OTF reprojection as in the example below (only the renderer configuration
+part is reported)
+
+
+::
+
+    ...
+    # set layer set
+    layers = QgsMapLayerRegistry.instance().mapLayers()
+    lst = layers.keys()
+    render.setLayerSet(lst)
+
+    # Set destination CRS to match the CRS of the first layer
+    render.setDestinationCrs(layers.values()[0].crs())
+    # Enable OTF reprojection
+    render.setProjectionsEnabled(True)
+    ...
+
+
 .. index:: output; using Map Composer
 
 Output using Map Composer
@@ -69,9 +96,10 @@ then exported to PDF, raster images or directly printed on a printer.
 The composer consists of a bunch of classes. They all belong to the core
 library. QGIS application has a convenient GUI for placement of the elements,
 though it is not available in the GUI library. If you are not familiar with
-`Qt Graphics View framework <http://doc.qt.nokia.com/stable/graphicsview.html>`_,
+`Qt Graphics View framework <http://doc.qt.io/qt-4.8/qgraphicsview.html>`_,
 then you are encouraged to check the documentation now, because the composer
-is based on it.
+is based on it. Also check the `Python documentation of the implementation of QGraphicView
+<http://pyqt.sourceforge.net/Docs/PyQt4/qgraphicsview.html>`_.
 
 The central class of the composer is :class:`QgsComposition` which is derived
 from :class:`QGraphicsScene`. Let us create one
